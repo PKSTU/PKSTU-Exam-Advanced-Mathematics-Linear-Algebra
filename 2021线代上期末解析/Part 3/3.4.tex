@@ -1,0 +1,14 @@
+由题意有 $\det(\vb A)=4$, 故 $\vb A$ 可逆.
+\[
+	\begin{aligned}
+\vb A\vb X\vb A^*=8\vb X\vb A^{-1}+12\vb E_4&\Rightarrow \vb X\vb A^*=8\vb A^{-1}\vb X\vb A^{-1}+12\vb A^{-1}\\
+&\Rightarrow \det(\vb A)\vb X\cdot \vb A^{-1}=8\vb A^{-1}\vb X\vb A^{-1}+12\vb A^{-1}\\
+&\Rightarrow 4\vb X=8\vb A^{-1}\vb X+12\vb E_4\\
+&\Rightarrow(\vb E_4-2\vb A^{-1})\vb X=3\vb E_4\\
+&\Rightarrow \vb X=3(\vb E_4-2\vb A^{-1})^{-1}
+	\end{aligned}
+\]
+于是解得
+\[
+\vb X=3\begin{pmatrix}-1&0&0&0\\ 0&-1&0&0\\ -2&0&-1&0\\ 0&-3&0&2\end{pmatrix}
+\]

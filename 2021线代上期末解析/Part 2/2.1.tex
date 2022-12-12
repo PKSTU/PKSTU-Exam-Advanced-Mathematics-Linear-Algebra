@@ -1,0 +1,36 @@
+\begin{enumerate}
+    \item B 
+    
+    解的解构：齐次通解\(+\)非齐次特解
+    \[\frac{1}{2} \bm{A} ( \bm{X}_1 + \bm{X}_2) = \frac{1}{2}\cdot 2 \bm{\beta} = \bm{\beta}\]为方程的特解，\(k_1(\bm{\alpha}_1 + \bm{\alpha}_2)\)与\(k_2 \bm{\alpha}_2\)线性无关。又\(\r (A) = 2\)
+    因此\(k_1(\bm{\alpha}_1 + \bm{\alpha})\)与\(k_2 \bm{\alpha}_2\)是\(\boldsymbol{Ax} = \boldsymbol{0}\)的基础解系。
+
+    \item A
+
+    \begin{enumerate}[(1)]
+        \item 由于相似矩阵的迹相同，故\[-2 + 1 = y + 2 - 2 \qquad \Longrightarrow\qquad y = -1\]
+        \item 有\[|\boldsymbol{A} + \boldsymbol{E}| = \left|\begin{aligned}
+             -1 & &  x &  & 0 &  \\   2 & &  1 & & 2  & \\ 3 & &  1 &  & 2 & \\
+        \end{aligned} \right|= 0\qquad \Longrightarrow\qquad x = 0\]
+    \end{enumerate}
+
+    \item B
+
+    \begin{enumerate}[(1)]
+        \item \((\boldsymbol{E} - \boldsymbol{A})(\boldsymbol{E} + \boldsymbol{A}) = \boldsymbol{E}^2 - \boldsymbol{A}^2 = \boldsymbol{E}\)，正确;
+        \item 令\(\displaystyle\boldsymbol{A} = \begin{pmatrix}
+            1 & & \\ & 1 & \\ & & 0\\
+        \end{pmatrix}
+        \)则\(\boldsymbol{A} ^ 2 = \boldsymbol{A}\)，但\(\boldsymbol{A} \neq \boldsymbol{E},\; \boldsymbol{A}\neq \boldsymbol{O}\)，错误;
+        \item 由于\(\boldsymbol{A}\)可逆，故\[\boldsymbol{Ax} = \boldsymbol{Ay} \qquad \Longrightarrow\qquad \boldsymbol{A}^{-1} \boldsymbol{Ax} = \boldsymbol{A}^{-1} \boldsymbol{Ay} \qquad \Longrightarrow \qquad \boldsymbol{x} = \boldsymbol{y}\]正确;
+        \item 由于\(\boldsymbol{AB} = \boldsymbol{BA}\)在一般情况下是不成立的，故错误.
+    \end{enumerate}
+
+    \item C
+
+    由于\(\boldsymbol{a} = -(\boldsymbol{b} + \boldsymbol{c})\)，故\[\boldsymbol{a} \times  \boldsymbol{b} = -(\boldsymbol{b} + \boldsymbol{c}) \times \boldsymbol{b} =-\boldsymbol{c} \times \boldsymbol{b}=\boldsymbol{b} \times \boldsymbol{c} \]
+
+    \item B
+
+    由题目有：\(\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3 , \boldsymbol{\beta}_1\)线性相关，而\(\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3 , \boldsymbol{\beta}_2\)线性无关，故\(\boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3 , \boldsymbol{\beta}_2\)线性无关（整体线性无关则部分组线性无关）。
+\end{enumerate}

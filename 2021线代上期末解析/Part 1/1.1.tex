@@ -1,0 +1,47 @@
+\begin{enumerate}
+    \item \(26\).\[\]
+
+    注意到\[\boldsymbol{B} = [\boldsymbol{\alpha}_1, 2\boldsymbol{\alpha}_1 + 3 \boldsymbol{\alpha}_2 + 5\boldsymbol{\alpha}_3 , \boldsymbol{\alpha}_2 + 6 \boldsymbol{\alpha}_3] = [\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2 , \boldsymbol{\alpha_3}] \begin{pmatrix}
+        1 & 2 &  \\ & 3 & 1 \\ & 5 & 6\\
+    \end{pmatrix} = \boldsymbol{A}\begin{pmatrix}
+        1 & 2 &  \\ & 3 & 1 \\ & 5 & 6\\
+    \end{pmatrix}\]
+    故\[|\boldsymbol{B}| = |\boldsymbol{A}| \left|\begin{pmatrix}
+        1 & 2 &  \\ & 3 & 1 \\ & 5 & 6\\
+    \end{pmatrix}\right| = 26\]
+
+    \item \(-2\).\[\]
+    
+    由于实对称矩阵属于不同特征值的特征向量相互正交，故\[\langle \boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2 \rangle = - 1+ 3 + x = 0\qquad \Longrightarrow\qquad x = -2\]
+
+    \item \(\displaystyle \begin{pmatrix}
+        c_{21} & c_{22} & c_{23} \\ 
+        c_{11} & c_{12} & c_{13} \\ 
+        c_{31} & c_{32} & c_{33} \\ 
+    \end{pmatrix}   .
+    \)\[\]
+    
+    \(\boldsymbol{A}^{15}\boldsymbol{C}\)是将\(\boldsymbol{C}\)的\(1,2\)行交换\(15\)遍，即交换\(\boldsymbol{C}\)的\(1, 2\)行。\(\boldsymbol{CB}^{16}\)是将\(\boldsymbol{C}\)的\(1,3\)列交换\(16\)遍，即不变。故总体的作用是将\(\boldsymbol{C}\)的\(1,2\)行交换。
+
+    \item \((1, 0, -1)\).\[\]
+
+    设\(\displaystyle \frac{x}{-1} = \frac{y - 1}{1} = \frac{z - 1}{2} = t\)，即\[\left\{\begin{aligned}
+        &x = -1 \\ &y = t + 1 \\ &z = 2t + 1
+    \end{aligned}\right.\]
+    带入平面方程有\[-2t + t + 1 - 2t - 4 = 0 \qquad \Longrightarrow\qquad t = -1 \qquad \Longrightarrow\qquad \left\{\begin{aligned}
+        &x = 1 \\ &y = 0 \\ &z = -1
+    \end{aligned}\right.\]
+
+    \item \( t \in (0, 2).\)\[\]
+    
+    实二次型的矩阵为\[\boldsymbol{A} = \begin{pmatrix}
+        t & & \\ & 1 & t \\ & t & 4\\
+    \end{pmatrix}\]
+    由正惯性指数为\(3\)可知\(\boldsymbol{A}\)是正定矩阵，故各阶顺序主子式大于\(0\)，即\[\left\{\begin{aligned}
+        &\Delta_1 = t > 0\\ &\Delta_2 = t > 0\\ & \Delta_3 = 4t - t^3 > 0
+    \end{aligned}  \right. \qquad \Longrightarrow\qquad t \in (0, 2)\]
+
+
+
+
+\end{enumerate}

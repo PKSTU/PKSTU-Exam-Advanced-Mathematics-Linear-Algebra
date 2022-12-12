@@ -1,0 +1,14 @@
+
+
+\begin{enumerate}
+    \item 由于\[\begin{aligned}
+        \boldsymbol{A}^2  & = (\boldsymbol{E} - \boldsymbol{\alpha\alpha}\t) (\boldsymbol{E} - \boldsymbol{\alpha\alpha}\t) = \boldsymbol{E} - 2 \boldsymbol{\alpha\alpha}\t + \boldsymbol{\alpha\alpha}\t \boldsymbol{\alpha\alpha}\t  \\ & = \boldsymbol{E} - 2\boldsymbol{\alpha\alpha}\t + (\boldsymbol{\alpha}\t \boldsymbol{\alpha})\boldsymbol{\alpha\alpha}\t = \boldsymbol{E} - (2 - \boldsymbol{\alpha}\t \boldsymbol{\alpha})\boldsymbol{\alpha\alpha}\t
+    \end{aligned}\]
+    其中\(\boldsymbol{\alpha}\t \boldsymbol{\alpha}\)可以提出来是因为\(\boldsymbol{\alpha}\t \boldsymbol{\alpha}\)是一个数。故\[\boldsymbol{A}^2 = \boldsymbol{A} \qquad \Longleftrightarrow\qquad \boldsymbol{E} - \boldsymbol{\alpha\alpha}\t = \boldsymbol{E} - (2 - \boldsymbol{\alpha}\t \alpha) \boldsymbol{\alpha\alpha}\t\qquad\Longleftrightarrow\qquad \boldsymbol{\alpha}\t \boldsymbol{\alpha} = 1\]
+
+    \item 由1知，\[\boldsymbol{\alpha}\t \boldsymbol{\alpha}\qquad\Longleftrightarrow\qquad\boldsymbol{A}^2 = \boldsymbol{A}\]我们断言：\underline{\(\boldsymbol{A}\)是降秩矩阵}。若不然，反设\(\boldsymbol{A}\)满秩，从而可逆。那么\[\begin{aligned}
+        \boldsymbol{A}^2  = \boldsymbol{A} \qquad & \Longrightarrow \qquad \boldsymbol{A}^2\boldsymbol{A}^{-1}  = \boldsymbol{AA}^{-1}\qquad \Longrightarrow \qquad \boldsymbol{A} = \boldsymbol{E} \\ &\Longrightarrow\qquad \boldsymbol{A} = \boldsymbol{E} - \boldsymbol{\alpha\alpha}\t = \boldsymbol{E}\qquad \Longrightarrow\qquad\boldsymbol{\alpha\alpha}\t = 0
+    \end{aligned}
+        \]
+        这与\(\boldsymbol{\alpha\alpha}\t = 1\)矛盾，故\(\boldsymbol{A}\)是降秩矩阵。
+\end{enumerate}

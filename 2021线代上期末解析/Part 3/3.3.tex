@@ -1,0 +1,37 @@
+设 $\overline{\vb A}$ 为 $\vb A$ 的增广矩阵, 则
+\[
+	\overline{\vb A}=\left[\begin{array}{c:c}\vb{A}&\vb{b}\end{array}\right]=\left[\begin{array}{ccccc:c}
+	1 & -2 & 1 & 1 & -5  & 3 \\
+2 & -4 & 3 & 1 & -11 & 6 \\
+1 & -2 & 2 & 3 & -12 & 6 \\
+3 & -6 & 3 & 2 & -13 & t\end{array}\right]\to\left[\begin{array}{ccccc:c}
+1 & -2 & 0 & 0 & 0  & 9-t \\
+0 & 0  & 1 & 0 & -3 & 9-t \\
+0 & 0  & 0 & 1 & -2 & 9-t \\
+0 & 0  & 0 & 0 & 0  & t-8
+\end{array}\right]
+\]
+要使线性方程组组有解, 则 $r(\vb A)=r(\overline{\vb A})$, 此时 $t=8$. 
+\[
+	\overline{\vb A}=\left[\begin{array}{ccccc:c}
+1 & -2 & 0 & 0 & 0  & 1 \\
+0 & 0  & 1 & 0 & -3 & 1 \\
+0 & 0  & 0 & 1 & -2 & 1 \\
+0 & 0  & 0 & 0 & 0  & 0
+\end{array}\right]
+\]
+由此得方程组由自由未知量表示的通解为
+\[
+	\left\{
+\begin{aligned}
+x_1=2x_2+1\\
+x_3=3x_5+1\\
+x_4=2x_5+1
+\end{aligned}
+	\right.
+\]
+于是得方程组的结构式通解为
+\[
+	\vb{x}=\begin{pmatrix}1\\0\\1\\1\\0\end{pmatrix}+c_1\begin{pmatrix}2\\1\\0\\0\\0\end{pmatrix}+c_2\begin{pmatrix}0\\0\\3\\2\\1\end{pmatrix}
+\]
+其中 $c_1,c_2$ 为任意常数.

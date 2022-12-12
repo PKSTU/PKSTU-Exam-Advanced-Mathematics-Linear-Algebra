@@ -1,0 +1,20 @@
+二次型的矩阵为\[\boldsymbol{A} = \begin{pmatrix}
+    3 & -1 & 3 \\ -1 & 3 & -3 \\ 3 & -3 & 1
+\end{pmatrix}\]
+
+令\(|\boldsymbol{A} - \lambda\boldsymbol{I}| = 0\)，解得\[\lambda_1 = 2,\qquad\lambda_2 = -2,\qquad\lambda_3 = 7\]
+
+将\(\lambda_i\)代入\(\boldsymbol{A} - \lambda\boldsymbol{I}\)中求解特征向量有\[\boldsymbol{\xi}_1 = \begin{pmatrix}
+    \displaystyle \frac{1}{\sqrt[]{2}} & \displaystyle\frac{1}{\sqrt[]{2}}&0
+\end{pmatrix}\t \qquad\boldsymbol{\xi}_2 = \begin{pmatrix}
+    \displaystyle\frac{-1}{\sqrt[]{6}} &\displaystyle\frac{1}{\sqrt[]{6}}&\displaystyle\frac{2}{\sqrt[]{6}}
+\end{pmatrix}\t \qquad\boldsymbol{\xi}_3 = \begin{pmatrix}
+    \displaystyle\frac{1}{\sqrt[]{3}} &\displaystyle\frac{-1}{\sqrt[]{3}} &\displaystyle\frac{1}{\sqrt[]{3}} &
+\end{pmatrix}\t\]
+
+故令\(\boldsymbol{P} = (\boldsymbol{\xi}_1, \boldsymbol{\xi}_2, \boldsymbol{\xi}_3)\)，那么\[\boldsymbol{A} = \boldsymbol{P\Lambda P}^{-1} = \boldsymbol{P\Lambda P}\t\]
+其中\[\boldsymbol{\Lambda} = \begin{pmatrix}
+    2 & & \\ & -2 & \\ & & 7
+\end{pmatrix}\]
+因此线性变换为\(\boldsymbol{x} = \boldsymbol{Py}\)，标准型为\[f = 2y_1^2 - 2y_2^2 + 7y_3^2\]
+规范型为\[f = z_1^2 - z_2^2 + z_3^2\]
