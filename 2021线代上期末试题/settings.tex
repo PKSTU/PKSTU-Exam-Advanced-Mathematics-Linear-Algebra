@@ -1,0 +1,115 @@
+\usepackage{tcolorbox,listings,hlist,enumerate,ulem,ifthen,ctex}
+\usepackage[left=1cm,right=1cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{amscd,amssymb,amsfonts,amsbsy,amsmath,verbatim,color, mathrsfs,yhmath,tkz-euclide,chemfig,siunitx,circuitikz}
+\usepackage[version=4]{mhchem}
+\usepackage{asymptote}\usepackage{framed}
+\usepackage{lastpage}
+\usepackage{geometry} %调整页面边框
+\geometry{a4paper,scale=0.8}%调整到80%
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{multirow}%纵向合并表格
+\usetikzlibrary{shapes.geometric,through,decorations.pathmorphing,arrows.meta,quotes,mindmap,shapes.symbols,shapes.arrows,automata,angles,3d,trees,shadows,automata,arrows,shapes.callouts,patterns,through,hobby}
+\usetikzlibrary{intersections}%应用此 library 找到两条曲线的交点
+\usetikzlibrary{calc} % 引入计算支持
+\usepgflibrary{fpu}%调用 fpu 程序库，在计算线段与曲线、曲线与曲线的交点时使用这个库。
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}%输入罗马数字
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\usepackage{mathrsfs}
+\usepackage{diagbox}%制作带斜线表头的宏包
+\usepackage{pifont}%输入带圈数字
+\usepackage{verbatim}%区间注释宏包
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{tasks}
+\settasks{label=\Alph*.,
+	label-offset={0.5em},
+	label-align=left,
+	column-sep={2pt},
+	item-indent={1.3em},before-skip={-0.7em},after-skip={-0.7em}}
+\usepackage{ifthen}
+\usepackage{array}
+
+%---------- 选择题和填空题设置  --------------
+  %选择题的4个选项，使用一个命令根据选项内容长度自动排版
+\newlength{\lab}
+\newlength{\lb}
+\newlength{\lc}
+\newlength{\ld}
+\newlength{\lhalf}
+\newlength{\lquarter}
+\newlength{\lmax}
+\newcommand{\xx}[4]{%%%%%%%%%
+	\settowidth{\lab}{A.~#1~~~}
+	\settowidth{\lb}{B.~#2~~~}
+	\settowidth{\lc}{C.~#3~~~}
+	\settowidth{\ld}{D.~#4~~~}
+	\ifthenelse{\lengthtest{\lab > \lb}}  {\setlength{\lmax}{\lab}}  {\setlength{\lmax}{\lb}}
+	\ifthenelse{\lengthtest{\lmax < \lc}}  {\setlength{\lmax}{\lc}}  {}
+	\ifthenelse{\lengthtest{\lmax < \ld}}  {\setlength{\lmax}{\ld}}  {}
+	\setlength{\lhalf}{0.5\linewidth}
+	\setlength{\lquarter}{0.25\linewidth}
+	\ifthenelse{\lengthtest{\lmax > \lhalf}}
+	{%
+		\begin{hlist}[pre skip=0pt,item skip=0pt,,item offset={1.5em}, label=\Alpha {hlisti}.,pre label={}]1
+			\hitem #1
+			\hitem #2
+			\hitem #3
+			\hitem #4
+		\end{hlist}
+	}  %%%
+	{%%
+		\ifthenelse{\lengthtest{\lmax > \lquarter}} % 
+		{%
+			\begin{hlist}[pre skip=0pt,item skip=0pt,item offset={1.5em}, label=\Alpha {hlisti}.,pre label={}]2
+				\hitem #1
+				\hitem #2
+				\hitem #3
+				\hitem #4
+			\end{hlist}
+		}
+		{%
+			\begin{hlist}[\parskip=0pt,pre skip=0pt,item skip=0pt,item offset={1.5em}, label=\Alpha {hlisti}.,pre label={}]4
+				\hitem #1
+				\hitem #2
+				\hitem #3
+				\hitem #4
+			\end{hlist}
+}}}
+
+\newcommand{\tk}[2][2]{\uline{\makebox[#1cm][c]{%
+				\ifanswer
+				\textcolor{red}{#2}%
+				\else
+				\phantom{#2}%
+				\fi}}}%填空答案
+\newcommand{\kh}[1]{\hfill(\  {{%
+			\ifanswer
+			{\makebox[0.4cm][c]{\textcolor{red}{#1}}}%
+			\else
+			\phantom{\makebox[0.4cm][c]{#1} }%
+			\fi}\  )}}%选择答案
+	
+\newif\ifanswer
+\newcommand{\answer}[1]{\ifthenelse{\isodd{#1}}{\answertrue}{}}
+\newcommand{\ty}[2]{\textcolor{blue}{\  {{%
+				\ifty
+				{%
+				#1}%
+				\else
+				%\vspace*{8cm}%这里是空出的答题区域。也可以在exam-2022.tex中的题目下方插入合适的空白区域大小
+				\fi}\  }}}%简答题答案/答案解析				
+\newif\ifty
+\newcommand{\tiyuan}[1]{\ifthenelse{\isodd{#1}}{\tytrue}{}}
+
+\newcommand{\who}[1]{{{ %
+			\ifwho
+			{\hfill(\ \makebox[2.0cm][c]{\textcolor{blue}{#1}}\  )}%
+			\else
+			\phantom{\makebox[2.0cm][c]{#1} }%
+			\fi}}}%（供题人：xxx）			
+\newif\ifwho
+\newcommand{\zuozhe}[1]{\ifthenelse{\isodd{#1}}{\whotrue}{}}
