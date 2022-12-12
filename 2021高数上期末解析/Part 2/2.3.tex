@@ -1,0 +1,18 @@
+\paragraph*{2.3} $3$.
+
+因为
+\[
+   \begin{aligned}
+\int_{0}^{\pi}f''(x)\sin x\,\mathrm dx&=\int_{0}^{\pi}\sin x\,\mathrm df'(x)\\&=f'(x)\sin x\mid_{0}^{\pi}-\int_{0}^{\pi}f'(x)\,\mathrm d\sin x\\
+&=-\int_{0}^{\pi}f'(x)\cos x\,\mathrm dx=-f(x)\cos x\mid_{0}^{\pi}+\int_{0}^{\pi}f(x)\,\mathrm d\cos x\\
+&=f(\pi)+f(0)-\int_{0}^{\pi}f(x)\sin x\,\mathrm dx
+   \end{aligned}
+\]
+于是
+\[
+   \begin{aligned}
+\int_{0}^{\pi}[f(x)+f''(x)]\sin x\,\mathrm dx&=\int_{0}^{\pi}f(x)\sin x\,\mathrm dx+\int_{0}^{\pi}f''(x)\sin x\,\mathrm dx\\
+&=\int_{0}^{\pi}f(x)\sin x\,\mathrm dx +f(\pi)+f(0)-\int_{0}^{\pi}f(x)\sin x\,\mathrm dx\\&=f(\pi)+f(0)
+   \end{aligned}
+\]
+故 $f(\pi)+f(0)=5$, $f(0)=3$.
