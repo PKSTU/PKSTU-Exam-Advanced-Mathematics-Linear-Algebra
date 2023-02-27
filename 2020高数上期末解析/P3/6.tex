@@ -1,0 +1,25 @@
+\paragraph*{3.6} $k>2,b=0,c=0$. 
+
+易见 $f$ 在 $(-\infty, 0)$ 和 $(0, +\infty)$ 内均连续可微, 只要讨论 $f$ 在 $x = 0$ 处的性质.
+
+当 $k\leq 0$ 时, $f\left(0^{+}\right)$ 不存在, 故 $k > 0$.
+
+当 $k>0$ 时, 有 $f\left(0^{-}\right) = c, f(0) = 0, f\left(0^{+}\right) = 0$. 故 $c = 0$.
+
+又 $f'_+(0) = \lim\limits_{x\to 0^{+}} \dfrac{f(x) - f(0)}{x} = \lim\limits_{x\to 0^{+}} x^{k-1}\sin\dfrac{1}{x}$. 因此 $k>1$, 且 $f'_+(0) = 0$. 又 $f'_-(0) = b$, 从而 $b = 0$.
+
+当 $k > 1, b = 0, c = 0$ 时, 有
+\[
+	f'(x) = 
+	\left\{
+\begin{aligned}
+&2a\sin x\cos x,& x < 0\\
+&0,& x = 0\\
+&kx^{k-1}\sin\dfrac{1}{x}-x^{k-2}\cos \dfrac{1}{x},&x>0
+\end{aligned}
+	\right.
+\]
+
+当 $k\leq 2$ 时, $f'\left(0^{+}\right)$ 不存在, 所以 $k>2$.
+
+即 $k>2,b=0,c=0$ 是 $f$ 在 $\mathbb{R}$ 上连续可微的必要条件.

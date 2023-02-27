@@ -1,0 +1,12 @@
+\paragraph*{3.4} $4 - \pi$.
+
+注意到 $\sin x$ 是奇函数, 于是
+\[
+	I = \int_{-1}^{1}\dfrac{2x^2 + x^2\sin x}{1 + \sqrt{1 - x^2}}\d x = \int_{-1}^{1} \dfrac{2x^2}{1 + \sqrt{1 - x^2}}\d x
+	= 4\int_{0}^{1} \dfrac{x^2}{1 + \sqrt{1 - x^2}} \d x
+\]
+
+分母有理化, 有
+\[
+	4\int_{0}^{1} \dfrac{x^2}{1 + \sqrt{1 - x^2}} \d x = 4\int_{0}^{1} (1 - \sqrt{1 - x^2})\d x=4-4\int_{0}^{1}\sqrt{1 - x^2}\d x=4-\pi
+\]

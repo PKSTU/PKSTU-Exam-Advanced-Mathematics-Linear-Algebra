@@ -1,0 +1,25 @@
+\paragraph*{4.1} 令 $ax+\dfrac{x}{b}=\sqrt{t^2+4ab}$, 则 $t=ax-\dfrac{b}{x}$. 解得 $x=\dfrac{t\pm\sqrt{t^2+4ab}}{2a}$. 当 $t=0$ 时, $x=\sqrt{b}{a}$. 故将原积分分段为
+\[
+	{\color{red}{\int_{0}^{\sqrt{\frac{b}{a}}}f\left(ax+\dfrac{b}{x}\right)\d x}}+\color{blue}{\int_{\sqrt{\frac{b}{a}}}^{+\infty}f\left(ax+\dfrac{b}{x}\right)\d x}
+\]
+
+当 $x\to 0$ 时, $ax+\dfrac{b}{x}\to +\infty$, 当 $x\to +\infty$ 时, $ax+\dfrac{b}{x}\to+\infty$.
+
+故对红色部分, 代入 $x=\dfrac{t-\sqrt{t^2+4ab}}{2a}$, 对蓝色部分, 代入 $x=\dfrac{t+\sqrt{t^2+4ab}}{2a}$. 原积分化为
+\[
+	I=\int_{0}^{+\infty}f\left(\sqrt{t^2+4ab}\right)\d\left(\dfrac{t-\sqrt{t^2-4ab}}{2a}\right)+\int_{0}^{+\infty}f\left(\sqrt{t^2+4ab}\right)\d \left(\dfrac{t+\sqrt{t^2-4ab}}{2a}\right)
+\]
+
+于是有
+\[
+	\begin{aligned}
+I=\dfrac{1}{2a}\int_{0}^{+\infty}f\left(\sqrt{t^2+4ab}\right)\d t -\dfrac{1}{2a}\int_{0}^{+\infty}f\left(\sqrt{t^2+4ab}\right)\d \left(\sqrt{t^2+4ab}\right)\\+\dfrac{1}{2a}\int_{0}^{+\infty}f\left(\sqrt{t^2+4ab}\right)\d t+\dfrac{1}{2a}\int_{0}^{+\infty}f\left(\sqrt{t^2+4ab}\right)\d \left(\sqrt{t^2+4ab}\right)\\
+	\end{aligned}
+\]
+
+即
+\[
+	I=\dfrac{1}{a}\int_{0}^{+\infty}f\left(\sqrt{t^2+4ab}\right)\d t
+\]
+
+原命题得证.

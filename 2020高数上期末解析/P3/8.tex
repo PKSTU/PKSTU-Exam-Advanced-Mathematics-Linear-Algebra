@@ -1,0 +1,32 @@
+\paragraph*{3.8} $\det(\vb A-\lambda\vb E)=(\lambda + 2)^2(4-\lambda) = 0\Rightarrow \lambda_1=\lambda_2=-2,\lambda_3=4$.
+
+当 $\lambda=-2$ 时, 
+\[
+	\vb A+2\vb E=\begin{pmatrix}3&-3&3\\ 3&-3&3\\ 6&-6&6\end{pmatrix}\to\begin{pmatrix}1&-1&1\\ 0&0&0\\ 0&0&0\end{pmatrix}\to \vb r_1=\begin{pmatrix}1\\ 1\\ 0\end{pmatrix}, \vb r_2=\begin{pmatrix}-1\\ 0\\ 1\end{pmatrix}
+\]
+
+当 $\lambda=4$ 时,
+\[
+	\vb A-4\vb E=\begin{pmatrix}-3&-3&3\\ 3&-9&3\\ 6&-6&0\end{pmatrix}\to \begin{pmatrix}1&-1&0\\ 0&2&-1\\ 0&0&0\end{pmatrix}\to\vb r_3=\begin{pmatrix}1\\ 1\\ 2\end{pmatrix}
+\]
+
+令 
+\[
+	\vb X(t)=(\vb r_1\e^{-2t},\vb r_2\e^{-2t},\vb r_3\e^{-4t})=\begin{pmatrix}\e^{-2t}&-\e^{-2t}&\e^{4t}\\ \e^{-2t}&0&\e^{4t}\\ 0&\e^{-2t}&2\e^{4t}\end{pmatrix}
+\]
+
+对应的齐次微分方程组的通解为 $\vb x=\vb X(t)\vb C$.
+
+又 $\vb X(0)\neq \vb E$, 计算得 $\vb X^{-1}(0)=\begin{pmatrix}-\frac{1}{2}&\frac{3}{2}&-\frac{1}{2}\\ -1&1&0\\ \frac{1}{2}&-\frac{1}{2}&\frac{1}{2}\end{pmatrix}$. 
+
+通解为 $\vb x(t)=\vb X(t)\vb X^{-1}(0)\vb C+\dint_{0}^{t}\vb X(t-\tau)\vb X^{-1}(0)\vb f(\tau)\d \tau$.
+
+代入公式, 得到
+\[
+	\vb x(t)=\begin{pmatrix}\e^{-2t}&-\e^{-2t}&\e^{4t}\\ \e^{-2t}&0&\e^{4t}\\ 0&\e^{-2t}&2\e^{4t}\end{pmatrix}\begin{pmatrix}-\frac{1}{2}&\frac{3}{2}&-\frac{1}{2}\\ -1&1&0\\ \frac{1}{2}&-\frac{1}{2}&\frac{1}{2}\end{pmatrix}\vb C+\int_{0}^{1}\begin{pmatrix}\mathrm{e}^{-2\left(t-\tau \right)}&\mathrm{-e}^{-2\left(t-\tau \:\right)}&\mathrm{e}^{4\left(t-\tau \:\right)}\\ \mathrm{e}^{-2\left(t-\tau \:\right)}\:&0&\mathrm{e}^{4\left(t-\tau \:\right)}\\ \:0&\mathrm{e}^{-2\left(t-\tau \:\right)}&2\mathrm{e}^{4\left(t-\tau \:\right)}\end{pmatrix}\begin{pmatrix}-\frac{1}{2}&\frac{3}{2}&-\frac{1}{2}\\ -1&1&0\\ \frac{1}{2}&-\frac{1}{2}&\frac{1}{2}\end{pmatrix}\begin{pmatrix}1\\ 1\\ 1\end{pmatrix}\d \tau
+\]
+
+解得
+\[
+	\vb x(t)=\begin{pmatrix}\e^{-2t}&-\e^{-2t}&\e^{4t}\\ \e^{-2t}&0&\e^{4t}\\ 0&\e^{-2t}&2\e^{4t}\end{pmatrix}\begin{pmatrix}-\frac{1}{2}&\frac{3}{2}&-\frac{1}{2}\\ -1&1&0\\ \frac{1}{2}&-\frac{1}{2}&\frac{1}{2}\end{pmatrix}\begin{pmatrix}C_1\\ C_2\\ C_3\end{pmatrix}+\begin{pmatrix}\frac{1}{8}-\frac{1}{4}\e^{-2t}+\frac{1}{8}\e^{4t}\\ \frac{1}{8}-\frac{1}{4}\e^{-2t}+\frac{1}{8}\e^{4t}\\ -\frac{1}{4}+\frac{1}{4}\e^{4t}\end{pmatrix}
+\]

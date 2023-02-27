@@ -1,0 +1,38 @@
+\paragraph*{1.4} $\dfrac{2\mr e^2-3\mr e}{4}$.
+
+因为 $\dfrac{\d x}{\d t}=6t+2$, 将 $y$ 看作关于 $t$ 的函数, 隐函数求导, 有 $\dfrac{\d y}{\d t}\e^{y}\sin t+\e^{y}\cos t-\dfrac{\d y}{\d t}=0$. 于是 $\dfrac{\d y}{\d t}=\dfrac{\e^y\cos t}{1-\e^y\sin t}=\dfrac{\e^y\cos t}{2-y}$. 所以
+\[
+	\dfrac{\d y}{\d x}=\dfrac{\d y}{\d t}\cdot\dfrac{\d t}{\d x}=\dfrac{\e^y\cos t}{(2-y)(6t+2)}
+\]
+
+取对数有
+\[
+	\ln\dfrac{\d y}{\d x}=y+\ln\cos t-\ln(6t+2)-\ln(2-y)
+\]
+
+两边对 $t$ 求导, 有
+\[
+	\dfrac{\frac{\d}{\d t}\cdot \frac{\d y}{\d x}}{\frac{\d y}{\d x}}=\dfrac{\d y}{\d t}-\tan t-\dfrac{6}{6t+2}+\dfrac{\d y}{\d t}\dfrac{1}{2-y}
+\]
+
+即
+\[
+	\dfrac{\d}{\d t}\cdot\dfrac{\d y}{\d x}=\dfrac{\d y}{\d x}\left(\dfrac{\d y}{\d t}-\tan t-\dfrac{6}{6t+2}+\dfrac{\d y}{\d t}\dfrac{1}{2-y}\right)
+\]
+
+所以
+\[
+	\dfrac{\d^2 y}{\d x^2}=\dfrac{\d}{\d t}\cdot\dfrac{\d y}{\d x}\cdot\dfrac{\d t}{\d x}=\dfrac{\d t}{\d x}\cdot\dfrac{\d y}{\d x}\left(\dfrac{\d y}{\d t}-\tan t-\dfrac{6}{6t-2}+\dfrac{\d y}{\d t}\cdot\dfrac{1}{2-y}\right)
+\]
+
+当 $t=0$ 时由 $\e^y\sin t-y+1=0$ 得到 $y(0)=1$. 又
+\[
+	\left.\dfrac{\d x}{\d t}\right|_{t=0}=\left.(6t+2)\right|_{t=0}=2
+\] 
+
+同理, 有 
+\[
+	\left.\dfrac{\d y}{\d t}\right|_{t=0}=\e, \left.\dfrac{\d y}{\d x}\right|_{t=0}=\left.\left(\dfrac{\d y}{\d t}\cdot \dfrac{\d t}{\d x}\right)\right|_{t=0}=\dfrac{\e}{2}
+\]
+
+代入可得答案为 $\dfrac{2\e^2-3\e}{4}$.

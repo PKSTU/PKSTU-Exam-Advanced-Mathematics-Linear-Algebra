@@ -1,0 +1,9 @@
+\paragraph*{4.2}容易证明 $0<x_n<3$, 因为 
+\[
+    x_{n+1}=\sqrt{x_n(3-x_n)}\leq \dfrac{x_n+(3-x_n)}{2}=\dfrac{3}{2}
+\]
+故
+\[
+    x_{n+1}=\sqrt{x_n(3-x_n)}\geq \sqrt{x_n\left(3-\dfrac{3}{2}\right)}=\sqrt{\dfrac{3}{2}x_n}\geq x_n(n\geq 2)
+\]
+于是 $\{x_n\}$ 单调递增且有上界. 故 $\{x_n\}$ 收敛, 对递推式两边求极限得 $\lim\limits_{n\to\infty}x_n=\dfrac{3}{2}$.

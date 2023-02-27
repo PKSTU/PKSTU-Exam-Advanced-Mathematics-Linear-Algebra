@@ -1,0 +1,20 @@
+\paragraph*{3.3} $\ln(y + \ln y) = x$.
+
+记 $p=y'$, 则 $y''=p \dfrac{\d p}{\d y}$. 原方程化为
+\[
+	(y+1)p\dfrac{\d p}{\d y}+p^2=(1 + 2y + \ln y) p
+\]
+
+于是
+\[
+	\begin{aligned}
+	\dfrac{\d p}{\d y} + \dfrac{p}{y + 1} = \dfrac{1 + 2y + \ln y}{y + 1}
+	\end{aligned}
+\]
+
+解得
+\[
+	p=\dfrac{1}{y + 1}\left(y^2 + y\ln y + C_1\right)
+\]
+
+由 $y(0) = 1$, $y'(0) = \dfrac{1}{2}$ 解得 $C_1 = 0$. 即 $y' = \dfrac{1}{y+1}\left(y^2 + y\ln y\right)$. 进而 $\ln(y + \ln y) = x + C_2$. 代入初值条件得到 $\ln (y + \ln y) = x$.
